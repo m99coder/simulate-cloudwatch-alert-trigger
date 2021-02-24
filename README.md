@@ -29,6 +29,8 @@ Example:
 
 For the above example, it means simulate based on `CPUUtilization` of the `AWS/RDS` instance `my-rds-instance-1` in the time range of 20th Feb, 2021 to 25th Feb, 2021 (exclusive) and apply a threshold of `85` (in this case this represents 85% CPU utilization). If `3` consecutive data points are equal or above the threshold the alarm is treated to be triggered.
 
+The sampling rate is statically set to 60 seconds and the metric is calculated based on `Average`, which usually makes a lot of sense as otherwise only snapshot values or a continuous value would be taken into account.
+
 ```bash
 threshold: 85
 necessary consecutive hits: 3
