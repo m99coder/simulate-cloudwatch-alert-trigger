@@ -32,7 +32,7 @@ For the above example, it means simulate based on `CPUUtilization` of the `AWS/R
 The sampling rate is statically set to 60 seconds and the metric is calculated based on `Average`, which usually makes a lot of sense as otherwise only snapshot values or a continuous value would be taken into account.
 
 ```bash
-threshold: 85
+threshold: 85.00
 necessary consecutive hits: 3
 start:  2021-02-20 00:00:00 +0100 CET
 end:    2021-02-25 00:00:00 +0100 CET
@@ -46,16 +46,16 @@ first:  2021-02-20 00:00:00 +0100 CET
 last:   2021-02-24 23:59:00 +0100 CET
 
 Timestamp                     │ Value │ Diff │ CH   │ TC   │ LS   │ Streak
-──────────────────────────────┼───────┼──────┼──────┼──────┼──────┼────────────────────
+──────────────────────────────┼───────┼──────┼──────┼──────┼──────┼────────────
 2021-02-22 16:07:00 +0100 CET │ 86.00 │ 1.00 │ 1    │ 0    │ 1    │ ◼
 2021-02-22 16:08:00 +0100 CET │ 88.00 │ 3.00 │ 2    │ 0    │ 2    │ ◼◼
 2021-02-22 16:09:00 +0100 CET │ 86.00 │ 1.00 │ 3    │ 1    │ 3    │ ◼◼◼
-──────────────────────────────┼───────┼──────┼──────┼──────┼──────┼────────────────────
+──────────────────────────────┼───────┼──────┼──────┼──────┼──────┼────────────
 2021-02-22 16:18:00 +0100 CET │ 87.00 │ 2.00 │ 1    │ 1    │ 3    │ ◼
 2021-02-22 16:19:00 +0100 CET │ 86.00 │ 1.00 │ 2    │ 1    │ 3    │ ◼◼
 2021-02-22 16:20:00 +0100 CET │ 89.00 │ 4.00 │ 3    │ 2    │ 3    │ ◼◼◼
 2021-02-22 16:21:00 +0100 CET │ 86.00 │ 1.00 │ 4    │ 2    │ 4    │ ◼◼◼◼
-──────────────────────────────┴───────┴──────┴──────┴──────┴──────┴────────────────────
+──────────────────────────────┴───────┴──────┴──────┴──────┴──────┴────────────
 CH: consecutive hits, TC: trigger count, LS: longest streak
 
 triggers: 2, streak: 4, events: 7
