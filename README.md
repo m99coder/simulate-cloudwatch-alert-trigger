@@ -37,10 +37,6 @@ necessary consecutive hits: 3
 start:  2021-02-20 00:00:00 +0100 CET
 end:    2021-02-25 00:00:00 +0100 CET
 
-6604 datapoints received
-first:  2021-02-20 00:00:00 +0100 CET
-last:   2021-02-24 14:03:00 +0100 CET
-
 7200 datapoints received
 first:  2021-02-20 00:00:00 +0100 CET
 last:   2021-02-24 23:59:00 +0100 CET
